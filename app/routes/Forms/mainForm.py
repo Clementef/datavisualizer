@@ -12,7 +12,7 @@ def getDataOptions():
     data = list(zip(colNames, colNames))
     return data
 
-class GiveForm(FLaskForm):
-    dataOptions = selectField("Data Options", choices=getDataOptions())
-    graphOptions = selectField("Graph Options",
+class GiveForm(FlaskForm):
+    dataOptions = SelectField("Data Options", choices=getDataOptions())
+    graphOptions = SelectField("Graph Options",
     choices=[("Bar Graph", "Bar Graph"), ("Pie Chart", "Pie Chart")])
