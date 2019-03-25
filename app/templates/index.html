@@ -3,9 +3,28 @@
 {% block body %}
 
 <div class="container">
-  <div class="jumbotron text-center">
-    <h1>Data Visualizer</h1>
-  </div>
+  <div class="jumbotron">
+        <h1>Input</h1>
+        <hr />
+        <form method=post>
+          {{ form.hidden_tag() }}
+          {{ form.dataOptions.label }}
+          {{ form.dataOptions() }}
+          <br />
+          {{ form.graphOptions.label }}
+          {{ form.graphOptions() }}
+          <br />
+          {{form.submit()}}
+        </form>
+    </div>
+</div>
+
+<br />
+
+<div class="container">
+  <div class="jumbotron">
+        <h1>Output</h1>
+        <hr />
 </div>
 
 {% endblock %}

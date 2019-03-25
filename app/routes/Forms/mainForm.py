@@ -14,7 +14,9 @@ def getDataOptions():
     return data
 
 
-class GiveForm(FlaskForm):
+class MainForm(FlaskForm):
     dataOptions = SelectField("Data Options", choices=getDataOptions())
     graphOptions = SelectField("Graph Options",
-                               choices=[("Bar Graph", "Bar Graph"), ("Pie Chart", "Pie Chart")])
+                               choices=[("Bar Graph", "Bar Graph"),
+                               ("Pie Chart", "Pie Chart")])
+    submit = SubmitField("Submit")
