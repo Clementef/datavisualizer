@@ -8,8 +8,11 @@
         <hr />
         <form method=post>
           {{ form.hidden_tag() }}
-          {{ form.dataOptions.label }}
-          {{ form.dataOptions() }}
+          {{ form.xData.label }}
+          {{ form.xData() }}
+          <br />
+          {{ form.yData.label }}
+          {{ form.yData() }}
           <br />
           {{ form.graphOptions.label }}
           {{ form.graphOptions() }}
@@ -25,6 +28,7 @@
   <div class="jumbotron">
         <h1>Output</h1>
         <hr />
+        <img class="img-fluid" src={{url_for('static', filename='sample.png')}} />
 </div>
 
 {% endblock %}
